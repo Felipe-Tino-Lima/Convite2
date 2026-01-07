@@ -23,6 +23,7 @@
       padding: 80px 40px;
       text-align: center;
       background: #ffffff;
+      box-sizing: border-box;
     }
 
     /* ===== TOPO ===== */
@@ -35,22 +36,34 @@
       font-family: 'Playfair Display', serif;
       font-size: 36px;
       font-style: italic;
-      margin-bottom: 40px;
+      margin-bottom: 30px;
     }
 
     .texto {
       font-size: 16px;
       line-height: 1.8;
-      letter-spacing: 1px;
-      margin-bottom: 60px;
+      letter-spacing: 0.8px;
+      margin-bottom: 50px;
+      max-width: 620px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
-    /* ===== ÍCONES CLICÁVEIS ===== */
+    /* ===== TÍTULOS DAS SEÇÕES ===== */
+    .secao {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      font-style: italic;
+      margin: 50px 0 30px;
+    }
+
+    /* ===== ÍCONES ===== */
     .info {
       display: flex;
       justify-content: space-around;
       flex-wrap: wrap;
       gap: 30px;
+      margin-bottom: 20px;
     }
 
     .item {
@@ -60,6 +73,7 @@
       flex-direction: column;
       align-items: center;
       transition: transform 0.2s ease, opacity 0.2s ease;
+      max-width: 220px;
     }
 
     .item:hover {
@@ -77,12 +91,14 @@
       align-items: center;
       justify-content: center;
       font-size: 28px;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
     }
 
     .item span {
       font-size: 14px;
       letter-spacing: 1px;
+      text-align: center;
+      line-height: 1.4;
     }
 
     /* ===== RODAPÉ ===== */
@@ -95,15 +111,42 @@
     /* ===== RESPONSIVO ===== */
     @media (max-width: 600px) {
       .container {
-        padding: 60px 20px;
+        padding: 50px 20px;
+      }
+
+      .capelo {
+        font-size: 42px;
       }
 
       h1 {
-        font-size: 30px;
+        font-size: 28px;
       }
 
       .texto {
         font-size: 15px;
+        line-height: 1.7;
+        margin-bottom: 40px;
+      }
+
+      .secao {
+        font-size: 22px;
+        margin: 40px 0 25px;
+      }
+
+      .info {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+      }
+
+      .icon {
+        width: 60px;
+        height: 60px;
+        font-size: 24px;
+      }
+
+      .item span {
+        font-size: 13px;
       }
     }
   </style>
@@ -122,87 +165,68 @@
       fé e determinação. Será uma honra ter você ao meu lado para celebrar
       essa conquista.
     </p>
-    <br/>
-    <br/>
-    Culto
-    <br/>
-    <br/>
+
+    <!-- ===== CULTO ===== -->
+    <div class="secao">Culto</div>
 
     <div class="info">
-
-      <!-- LOCAL E DATA -->
-      <a class="item" href="https://www.google.com/maps/place/Av.+Água+Verde,+1018+-+Água+Verde,+Curitiba+-+PR,+80620-200/@-25.4528048,-49.2837475,17z/data=!3m1!4b1!4m6!3m5!1s0x94dce47e3032e945:0xe081b3c833436395!8m2!3d-25.4528097!4d-49.2811726!16s%2Fg%2F11c25dpk2p?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+      <a class="item" href="https://www.google.com/maps/place/Av.+Água+Verde,+1018" target="_blank">
         <div class="icon">📍</div>
         <span>LOCAL</span>
-        <span>DATA: DIA 17 DE MARÇO ÀS 16:00</span>
+        <span>17 DE MARÇO • 16:00</span>
       </a>
 
-      <!-- TRAJE -->
-      <a class="item" href="https://www.google.com/search?q=traje+social+discreto&client=opera-gx&hs=hiX&sca_esv=8f2776e3a52834ed&sxsrf=AE3TifPfthNAJq10aentjWF_r1ZItOs1ig%3A1766518391450&ei=d-5KaYueG4T35OUP1cqzqA0&ved=0ahUKEwjLtdjpudSRAxWEO7kGHVXlDNUQ4dUDCBE&uact=5&oq=traje+social+discreto&gs_lp=Egxnd3Mtd2l6LXNlcnAiFXRyYWplIHNvY2lhbCBkaXNjcmV0bzIIEAAYgAQYywEyBhAAGBYYHjIGEAAYFhgeMgsQABiABBiGAxiKBTIIEAAYgAQYogQyCBAAGIAEGKIEMggQABiABBiiBDIIEAAYgAQYogQyBRAAGO8FSO4IUABYAHAAeAGQAQCYAYYBoAGGAaoBAzAuMbgBA8gBAPgBAvgBAZgCAaACjQGYAwCSBwMwLjGgB4UFsgcDMC4xuAeNAcIHAzItMcgHBIAIAA&sclient=gws-wiz-serp" target="_blank">
+      <a class="item" href="https://www.google.com/search?q=traje+social+discreto" target="_blank">
         <div class="icon">👗</div>
         <span>TRAJE</span>
       </a>
 
-      <!-- CONFIRMAR PRESENÇA -->
       <a class="item" href="https://wa.me/5541995262586?text=Confirmo%20minha%20presença%20no%20culto!" target="_blank">
         <div class="icon">✔️</div>
         <span>CONFIRMAR PRESENÇA</span>
       </a>
-
     </div>
-    <br/>
-    <br/>
-    Colação
-    <br/>
-    <br/>
-    <div class="info">
 
-      <!-- LOCAL E DATA -->
-      <a class="item" href="https://www.google.com/maps/place/R.+João+Gava,+920+-+Abranches,+Curitiba+-+PR,+82130-010/@-25.3845516,-49.2761755,17z/data=!3m1!4b1!4m6!3m5!1s0x94dce6cfc98eb099:0x892525cee2ae59fd!8m2!3d-25.3845516!4d-49.2761755!16s%2Fg%2F11c20c5_5j?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+    <!-- ===== COLAÇÃO ===== -->
+    <div class="secao">Colação</div>
+
+    <div class="info">
+      <a class="item" href="https://www.google.com/maps/place/R.+João+Gava,+920" target="_blank">
         <div class="icon">📍</div>
         <span>LOCAL</span>
-        <span>DATA: DIA 18 DE MARÇO ÀS 20:00</span>
+        <span>18 DE MARÇO • 20:00</span>
       </a>
 
-      <!-- TRAJE -->
-      <a class="item" href="https://www.google.com/search?client=opera-gx&q=traje+social&sourceid=opera&ie=UTF-8&oe=UTF-8" target="_blank">
+      <a class="item" href="https://www.google.com/search?q=traje+social" target="_blank">
         <div class="icon">👗</div>
         <span>TRAJE</span>
       </a>
 
-      <!-- CONFIRMAR PRESENÇA -->
       <a class="item" href="https://wa.me/5541995262586?text=Confirmo%20minha%20presença!" target="_blank">
         <div class="icon">✔️</div>
         <span>CONFIRMAR PRESENÇA</span>
       </a>
-
     </div>
-    <br/>
-    <br/>
-    Jantar
-    <br/>
-    <br/>
-    <div class="info">
 
-      <!-- LOCAL E DATA -->
-      <a class="item" href="https://www.google.com/maps/place/Rod.+da+Uva,+7100+-+Centro,+Colombo+-+PR,+83402-000/@-25.3023095,-49.2235993,17z/data=!3m1!4b1!4m6!3m5!1s0x94dcdd42346da16f:0x331e864f72011bb9!8m2!3d-25.3023144!4d-49.2210244!16s%2Fg%2F11s9w84_wh?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+    <!-- ===== JANTAR ===== -->
+    <div class="secao">Jantar</div>
+
+    <div class="info">
+      <a class="item" href="https://www.google.com/maps/place/Rod.+da+Uva,+7100" target="_blank">
         <div class="icon">📍</div>
         <span>LOCAL</span>
-        <span>DATA: DIA 20 DE MARÇO ÀS 20:00</span>
+        <span>20 DE MARÇO • 20:00</span>
       </a>
 
-      <!-- TRAJE -->
-      <a class="item" href="https://www.google.com/search?q=esporte+fino&client=opera-gx&sca_esv=8f2776e3a52834ed&sxsrf=AE3TifOcj7Wkeq5F6PafXlf-vAJQOlPS7A%3A1766521736418&ei=iPtKabWkGZSBhuMPp4DG8A0&ved=0ahUKEwi1iNmkxtSRAxWUgGEGHSeAEd4Q4dUDCBE&uact=5&oq=esporte+fino&gs_lp=Egxnd3Mtd2l6LXNlcnAiDGVzcG9ydGUgZmlubzIIEAAYgAQYywEyCBAAGIAEGMsBMggQABiABBjLATIIEAAYgAQYywEyCBAAGIAEGMsBMggQABiABBjLATIIEAAYgAQYywEyCBAAGIAEGMsBMggQABiABBjLATIIEAAYgAQYywFIvghQAFgAcAB4AZABAJgBjgGgAY4BqgEDMC4xuAEDyAEA-AEC-AEBmAIBoAKUAZgDAJIHAzAuMaAHvAWyBwMwLjG4B5QBwgcDMi0xyAcEgAgA&sclient=gws-wiz-serp" target="_blank">
+      <a class="item" href="https://www.google.com/search?q=esporte+fino" target="_blank">
         <div class="icon">👗</div>
         <span>TRAJE</span>
       </a>
 
-      <!-- CONFIRMAR PRESENÇA -->
       <a class="item" href="https://wa.me/5541995262586?text=Confirmo%20minha%20presença%20no%20jantar!" target="_blank">
         <div class="icon">✔️</div>
         <span>CONFIRMAR PRESENÇA</span>
       </a>
-
     </div>
 
     <footer>
@@ -212,5 +236,3 @@
   </div>
 </body>
 </html>
-
-
